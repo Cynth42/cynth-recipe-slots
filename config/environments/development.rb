@@ -52,5 +52,16 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  #Paperclip.options[:command_path] = "/usr/local/bin/"
+  
+  #config.paperclip_defaults = {
+  #     :storage => :s3,
+      #   :s3_credentials => {
+      #          :bucket => "skillcrush-rails",
+      #         :access_key_id => "AKIAI4Y7CIUPPOFAYN2Q",
+      #         :secret_access_key => "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"
+      #   }
+      #}
+  # Needed for Devise    
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
